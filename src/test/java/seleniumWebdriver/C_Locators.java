@@ -63,6 +63,7 @@ public class C_Locators {
 
         // Zlokalizuj sekcję strony używając "tagName"
         WebElement sectionByTagName = driver.findElement(By.tagName("section"));
+        WebElement footer = driver.findElement(By.tagName("footer"));
 
         driver.quit();
     }
