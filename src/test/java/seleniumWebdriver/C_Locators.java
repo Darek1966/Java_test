@@ -82,6 +82,8 @@ public class C_Locators {
         // Zlokalizuj radio przyciski z wyborem opcji, używając "cssSelector" po ID
         WebElement optionRadioButtonsByCssId = driver.findElement(By.cssSelector("#option-radio"));
         WebElement optionRadioButtonsByCssId2 = driver.findElement(By.cssSelector("span#option-radio.wpcf7-form-control.wpcf7-radio.option"));
+        // pobrany poprzez 'copy selector' - #wpcf7-f9259-p9257-o1 > form
+        WebElement form = driver.findElement(By.cssSelector("#wpcf7-f9259-p9257-o1 > form"));
 
         /** Zgadzam się z polityką prywatności - polityka prywatności */
         // Zlokalizuj link do polityki prywatności po url używając "cssSelector"
@@ -134,6 +136,7 @@ public class C_Locators {
         // Możemy w ten sposób wyszukać grupę elementów dla wszystkich metod findElements
         // Poniżej przykład z xpath. Wyszuka wszyskie elementy z typem checkbox
         List<WebElement> checkboxes = driver.findElements(By.xpath("//*[@type='checkbox']"));
+        List<WebElement> classes = driver.findElements(By.className("wpcf7-form-control wpcf7-text lastname"));
 
         driver.quit();
     }
